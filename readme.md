@@ -10,10 +10,10 @@ Install using `bower`.
 $ bower install 1000ch/x-zangief
 ```
 
-Load `x-zangief.js` in your HTML.
+Import `x-zangief.html` in your HTML.
 
 ```html
-<script src='bower_components/x-zangief/x-zangief.js'></script>
+<link rel='import' src='bower_components/x-zangief/x-zangief.html'>
 ```
 
 Put `<img is='x-zangief'>`!
