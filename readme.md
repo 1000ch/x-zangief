@@ -1,6 +1,6 @@
 # x-zangief
 
-![]()
+![](https://raw.githubusercontent.com/1000ch/x-zangief/master/img/zangief-combo.gif)
 
 ## Usage
 
@@ -26,4 +26,4 @@ Put `<img is='x-zangief'>`!
 <img is='x-zangief' zangief-type='win'>
 ```
 
-If `zangief-type` attribtue is omitted, He appears randomly.
+If `zangief-type` attribute is omitted, He appears randomly.
