@@ -1,0 +1,20 @@
+{
+  "name": "x-zangief",
+  "version": "0.1.0",
+  "homepage": "https://github.com/1000ch/x-zangief",
+  "authors": [
+    "1000ch <shogo.sensui@gmail.com>"
+  ],
+  "main": "x-zangief.html",
+  "keywords": [
+    "zangief"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
