@@ -1,8 +1,7 @@
 <script>
-  window.XZangief = (function () {
-
+  (function () {
     var doc = document.currentScript.ownerDocument;
-    var imgRoot = new URL('img', doc.baseURI);
+    var root = new URL(doc.baseURI);
 
     var ZANGIEF_TYPES = {
       combo: 'zangief-combo.gif',
@@ -13,6 +12,7 @@
     };
 
     function getRandomType() {
+
       var types = Object.keys(ZANGIEF_TYPES);
       var index = Math.floor(Math.random() * types.length);
       return types[index];
@@ -21,6 +21,7 @@
     var XZangiefPrototype = Object.create(HTMLImageElement.prototype);
 
     XZangiefPrototype.validateType = function () {
+
       var types = Object.keys(ZANGIEF_TYPES);
       if (types.indexOf(this.zangiefType) === -1) {
         this.zangiefType = getRandomType();
@@ -28,7 +29,8 @@
     };
 
     XZangiefPrototype.getImagePath = function () {
-      var imageUrl = new URL(ZANGIEF_TYPES[this.zangiefType], imgRoot);
+
+      var imageUrl = new URL('img/' + ZANGIEF_TYPES[this.zangiefType], root);
       return imageUrl.href;
     };
 
@@ -50,9 +52,9 @@
       }
     };
 
-    return document.registerElement('x-zangief', {
+    window.XZangief = document.registerElement('x-zangief', {
       prototype: XZangiefPrototype,
       extends: 'img'
     });
   })();
-<script>
+</script>
