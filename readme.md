@@ -16,14 +16,14 @@ Import `x-zangief.html` in your HTML.
 <link rel='import' src='bower_components/x-zangief/x-zangief.html'>
 ```
 
-Put `<img is='x-zangief'>`!
+Put `<x-zangief>`!
 
 ```html
-<img is='x-zangief' zangief-type='combo'>
-<img is='x-zangief' zangief-type='fail'>
-<img is='x-zangief' zangief-type='piledriver'>
-<img is='x-zangief' zangief-type='rolling'>
-<img is='x-zangief' zangief-type='win'>
+<x-zangief type='combo'></x-zangief>
+<x-zangief type='fail'></x-zangief>
+<x-zangief type='piledriver'></x-zangief>
+<x-zangief type='rolling'></x-zangief>
+<x-zangief type='win'></x-zangief>
 ```
 
-If `zangief-type` attribute is omitted, He appears randomly.
+If `type` attribute is omitted, He appears randomly.

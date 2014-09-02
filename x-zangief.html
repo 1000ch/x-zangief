@@ -1,3 +1,6 @@
+<template>
+  <img>
+</template>
 <script>
   (function () {
     var doc = document.currentScript.ownerDocument;
@@ -18,7 +21,7 @@
       return types[index];
     }
 
-    var XZangiefPrototype = Object.create(HTMLImageElement.prototype);
+    var XZangiefPrototype = Object.create(HTMLElement.prototype);
 
     XZangiefPrototype.validateType = function () {
 
@@ -36,25 +39,27 @@
 
     XZangiefPrototype.createdCallback = function () {
 
-      this.zangiefType = this.getAttribute('zangief-type');
+      this.zangiefType = this.getAttribute('type');
       this.validateType();
 
-      this.src = this.getImagePath();
+      this.shadowRoot = this.createShadowRoot();
+      this.template = doc.querySelector('template');
+      this.shadowRoot.appendChild(document.importNode(this.template.content, true));
+      this.shadowRoot.querySelector('img').src = this.getImagePath();
     };
 
     XZangiefPrototype.attributeChangedCallback = function (attributeName, oldValue, newValue) {
 
-      if (attributeName === 'zangief-type') {
+      if (attributeName === 'type') {
         this.zangiefType = newValue;
         this.validateType();
 
-        this.src = this.getImagePath();
+        this.shadowRoot.querySelector('img').src = this.getImagePath();
       }
     };
 
     window.XZangief = document.registerElement('x-zangief', {
-      prototype: XZangiefPrototype,
-      extends: 'img'
+      prototype: XZangiefPrototype
     });
   })();
 </script>
