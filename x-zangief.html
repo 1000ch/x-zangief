@@ -1,4 +1,4 @@
-<template>
+<template id="x-zangief-template">
   <img>
 </template>
 <script>
@@ -43,7 +43,7 @@
       this.validateType();
 
       this.shadowRoot = this.createShadowRoot();
-      this.template = doc.querySelector('template');
+      this.template = doc.querySelector('#x-zangief-template');
       this.shadowRoot.appendChild(document.importNode(this.template.content, true));
       this.shadowRoot.querySelector('img').src = this.getImagePath();
     };
