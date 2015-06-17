@@ -1,6 +1,6 @@
 # x-zangief
 
-![](https://raw.githubusercontent.com/1000ch/x-zangief/master/img/zangief-combo.gif)
+![](https://raw.githubusercontent.com/1000ch/x-zangief/gh-pages/img/zangief-combo.gif)
 
 ## Usage
 
