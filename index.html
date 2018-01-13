@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
+  <head>
     <meta charset="UTF-8">
     <title>x-zangief</title>
-    <link rel="import" href="x-zangief.html">
   </head>
   <body>
-    <x-zangief></x-zangief>
     <x-zangief type="combo"></x-zangief>
     <x-zangief type="fail"></x-zangief>
     <x-zangief type="piledriver"></x-zangief>
     <x-zangief type="rolling"></x-zangief>
     <x-zangief type="win"></x-zangief>
+    <script type="module">
+      import XZangief from './x-zangief.js';
+      customElements.define('x-zangief', XZangief);
+    </script>
   </body>
 </html>
