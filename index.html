@@ -2,17 +2,83 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>x-zangief</title>
+    <title>x-zangief: He is Zangief.</title>
+    <link rel="stylesheet" href="https://1000ch.github.io/gh-pages.css/gh-pages.css">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script defer src="https://buttons.github.io/buttons.js"></script>
+    <script defer src="https://unpkg.com/github-corner"></script>
+    <script type="module">
+      import XMarked from 'https://unpkg.com/x-marked';
+      import XZangief from 'https://unpkg.com/x-zangief';
+
+      customElements.define('x-marked', XMarked);
+      customElements.define('x-zangief', XZangief);
+
+      window.addEventListener('load', () => {
+        const xmarked = document.querySelector('x-marked');
+        const div = document.querySelector('div');
+        const h2 = xmarked.shadowRoot.querySelector('h2');
+        xmarked.shadowRoot.querySelector('div').insertBefore(div, h2);
+      });
+    </script>
   </head>
   <body>
-    <x-zangief type="combo"></x-zangief>
-    <x-zangief type="fail"></x-zangief>
-    <x-zangief type="piledriver"></x-zangief>
-    <x-zangief type="rolling"></x-zangief>
-    <x-zangief type="win"></x-zangief>
-    <script type="module">
-      import XZangief from './x-zangief.js';
-      customElements.define('x-zangief', XZangief);
-    </script>
+    <div>
+      <!-- Place this tag where you want the button to render. -->
+      <a class="github-button" href="https://github.com/1000ch/social-button" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star 1000ch/social-button on GitHub">Star</a>
+      <!-- Place this tag where you want the button to render. -->
+      <a class="github-button" href="https://github.com/1000ch" data-size="large" data-show-count="true" aria-label="Follow @1000ch on GitHub">Follow @1000ch</a>
+    </div>
+    <github-corner>
+      <a href="https://github.com/1000ch/social-button">GitHub</a>
+    </github-corner>
+    <div class="container">
+      <x-zangief type="fail"></x-zangief>
+      <x-zangief type="piledriver"></x-zangief>
+      <x-zangief type="rolling"></x-zangief>
+      <x-zangief type="win"></x-zangief>
+    </div>
+    <x-marked highlight class="container">
+# x-zangief
+
+He is Zangief.
+
+## Install
+
+Using npm:
+
+```bash
+$ npm install x-zangief
+
+```
+
+## Usage
+
+Import and register scripts.
+
+```html
+<script type="module">
+import XZangief from 'https://unpkg.com/x-zangief';
+
+customElements.define('x-zangief', XZangief);
+</script>
+```
+
+Put `<x-zangief>`!
+
+```html
+<x-zangief type="combo"></x-zangief>
+<x-zangief type="fail"></x-zangief>
+<x-zangief type="piledriver"></x-zangief>
+<x-zangief type="rolling"></x-zangief>
+<x-zangief type="win"></x-zangief>
+```
+
+If `type` attribute is omitted, He appears randomly.
+
+## License
+
+[MIT](https://1000ch.mit-license.org) © [Shogo Sensui](https://github.com/1000ch)
+    </x-marked>
   </body>
 </html>

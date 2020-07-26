@@ -1,19 +1,26 @@
 # x-zangief
 
-![](https://raw.githubusercontent.com/1000ch/x-zangief/gh-pages/img/zangief-combo.gif)
+> He is Zangief.
+
+## Install
+
+Using npm:
+
+```bash
+$ npm install x-zangief
+
+```
 
 ## Usage
 
-Install using `bower`.
-
-```bash
-$ bower install 1000ch/x-zangief
-```
-
-Import `x-zangief.html` in your HTML.
+Import and register scripts.
 
 ```html
-<link rel="import" src="bower_components/x-zangief/x-zangief.html">
+<script type="module">
+import XZangief from 'https://unpkg.com/x-zangief';
+
+customElements.define('x-zangief', XZangief);
+</script>
 ```
 
 Put `<x-zangief>`!
@@ -27,3 +34,7 @@ Put `<x-zangief>`!
 ```
 
 If `type` attribute is omitted, He appears randomly.
+
+## License
+
+[MIT](https://1000ch.mit-license.org) © [Shogo Sensui](https://github.com/1000ch)
