@@ -2,19 +2,24 @@
   "name": "x-zangief",
   "version": "2.0.0",
   "description": "He is Zangief",
-  "main": "index.js",
+  "homepage": "https://github.com/1000ch/x-zangief",
+  "bugs": {
+    "url": "https://github.com/1000ch/x-zangief/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/1000ch/x-zangief.git"
   },
-  "author": {
-    "name": "1000ch",
-    "email": "shogo.sensui@gmail.com",
-    "web": "http://github.com/1000ch"
-  },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/1000ch/x-zangief/issues"
+  "author": {
+    "name": "Shogo Sensui",
+    "email": "shogosensui@gmail.com",
+    "web": "https://github.com/1000ch"
   },
-  "homepage": "https://github.com/1000ch/x-zangief"
+  "main": "index.js",
+  "module": "index.js",
+  "files": [
+    "index.js",
+    "img"
+  ]
 }
