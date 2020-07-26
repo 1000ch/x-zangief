@@ -16,10 +16,23 @@
     "email": "shogosensui@gmail.com",
     "web": "https://github.com/1000ch"
   },
-  "main": "index.js",
-  "module": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "files": [
-    "index.js",
+    "dist",
     "img"
-  ]
+  ],
+  "scripts": {
+    "build": "webpack",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.26",
+    "file-loader": "^6.0.0",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "url-loader": "^4.1.0",
+    "webpack": "^5.0.0-beta.22",
+    "webpack-cli": "^3.3.12"
+  }
 }
